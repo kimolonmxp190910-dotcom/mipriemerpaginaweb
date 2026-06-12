@@ -1,0 +1,378 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0a0a;
+    color:#d8d8d8;
+    font-family:'Cinzel', serif;
+    line-height:1.8;
+}
+
+/* =========================
+   BARRA DE NAVEGACIÓN
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.95);
+    border-bottom:2px solid #8b6f1e;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:1.5rem;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:#d8d8d8;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#d4af37;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+    url("img/portada.jpg");
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-logo{
+    width:250px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#d4af37;
+    text-shadow:0 0 15px rgba(212,175,55,.5);
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:15px;
+}
+
+.hero h3{
+    color:#b8860b;
+    font-size:1.5rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#8b6f1e;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#b8860b;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+section{
+    padding:100px 10%;
+}
+
+section h2{
+    text-align:center;
+    color:#d4af37;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* =========================
+   HISTORIA
+========================= */
+
+.historia-container{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.historia-container img{
+    flex:1;
+    min-width:300px;
+    max-width:500px;
+    border-radius:10px;
+    border:2px solid #8b6f1e;
+}
+
+.texto{
+    flex:1;
+}
+
+.texto p{
+    margin-bottom:20px;
+    text-align:justify;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#151515;
+    border:1px solid #444;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(212,175,55,.3);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.contenido{
+    padding:20px;
+}
+
+.contenido h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.contenido p{
+    color:#cfcfcf;
+}
+
+/* =========================
+   JEFES DIFÍCILES
+========================= */
+
+.dificil{
+    border:2px solid #7a0f0f;
+}
+
+.dificil:hover{
+    box-shadow:0 0 25px rgba(122,15,15,.6);
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #8b6f1e;
+    transition:0.4s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-container{
+    display:flex;
+    justify-content:center;
+}
+
+.video-container iframe{
+    width:900px;
+    max-width:100%;
+    height:500px;
+    border:3px solid #8b6f1e;
+    border-radius:10px;
+}
+
+/* =========================
+   CURIOSIDADES
+========================= */
+
+.curiosidades-box{
+    max-width:900px;
+    margin:auto;
+    background:#151515;
+    padding:30px;
+    border-radius:10px;
+    border:1px solid #8b6f1e;
+}
+
+.curiosidades-box ul{
+    padding-left:25px;
+}
+
+.curiosidades-box li{
+    margin-bottom:15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:50px 20px;
+    border-top:2px solid #8b6f1e;
+}
+
+footer h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.redes{
+    margin-bottom:25px;
+}
+
+.redes a{
+    color:white;
+    font-size:2rem;
+    margin:0 15px;
+    transition:0.3s;
+}
+
+.redes a:hover{
+    color:#d4af37;
+}
+
+footer p{
+    color:#a0a0a0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .hero-logo{
+        width:180px;
+    }
+
+    section h2{
+        font-size:2rem;
+    }
+
+    .historia-container{
+        flex-direction:column;
+    }
+
+    .video-container iframe{
+        height:300px;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .hero h3{
+        font-size:1.2rem;
+    }
+
+    nav ul{
+        gap:12px;
+        font-size:0.9rem;
+    }
+
+    section{
+        padding:80px 7%;
+    }
+}
